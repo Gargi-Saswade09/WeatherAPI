@@ -14,7 +14,7 @@ function App() {
       return;
     }
 
-    const result = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`);
+    const result = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`);
     const data = await result.json();
     const lat = data[0]?.lat ?? null;
     const lon = data[0]?.lon ?? null;
